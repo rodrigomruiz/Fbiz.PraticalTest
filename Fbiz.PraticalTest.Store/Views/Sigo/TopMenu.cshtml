@@ -1,0 +1,17 @@
+﻿@model  Fbiz.PraticalTest.Store.ViewModels.TopMenuViewModel
+  
+<ul class="dropdown-menu">
+
+    <li>@Html.ActionLink("Consultar Categorias", "Index", "Categories")</li>
+
+    @if (Model.Categories != null)
+    {
+        <li class="divider"></li>
+
+        foreach (var item in Model.Categories)
+        {
+            <li>@Html.ActionLink(item.Name, "Index", "Home", new { category = item.CategoryId }, null)</li>
+        }
+    }
+</ul>
+

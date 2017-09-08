@@ -1,0 +1,100 @@
+﻿
+@model Fbiz.PraticalTest.Store.ViewModels.ProductCommentsViewModel
+
+@{
+    ViewBag.Title = "Comentarios do Produto";
+}
+
+
+<hr />
+<div>
+    <dl class="dl-horizontal">
+    </dl>
+</div>
+
+
+
+    <div>
+        <h4>Detalhes do Produto</h4>
+        <hr />
+
+        <dl class="dl-horizontal">
+            <dt>
+
+                @Html.DisplayNameFor(model => model.Product.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Product.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Product.Description)
+            </dt>
+
+            <dd>
+                <div>@Html.Raw(Model.Product.Description)</div>
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Product.CategoryId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Product.Category.Name)
+            </dd>
+
+        </dl>
+    </div>
+
+<hr />
+<h4>Comentarios do Produto</h4>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                Comentario ID
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Texto
+            </th>
+            <th>
+                Ativo?
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Comments)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+
+            </tr>
+        }
+    </table>
+    <p>
+        @Html.ActionLink("Back to List", "Index", "Home") |
+        @Html.ActionLink("Ver mais produtos dessa categoria", "Index", "Home", new { category = Model.Product.CategoryId }, null) |
+        @Html.ActionLink("Adicionar Novo Comentario", "AddNewComment", "Comments", new { idProduto = Model.Product.ProductId }, null)
+    </p>

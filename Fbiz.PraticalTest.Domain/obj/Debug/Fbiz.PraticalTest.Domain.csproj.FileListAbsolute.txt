@@ -1,0 +1,5 @@
+C:\Users\Rodrigo\Estudos\Fbiz.PraticalTest\Fbiz.PraticalTest.Domain\bin\Debug\Fbiz.PraticalTest.Domain.dll
+C:\Users\Rodrigo\Estudos\Fbiz.PraticalTest\Fbiz.PraticalTest.Domain\bin\Debug\Fbiz.PraticalTest.Domain.pdb
+C:\Users\Rodrigo\Estudos\Fbiz.PraticalTest\Fbiz.PraticalTest.Domain\obj\Debug\Fbiz.PraticalTest.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Estudos\Fbiz.PraticalTest\Fbiz.PraticalTest.Domain\obj\Debug\Fbiz.PraticalTest.Domain.dll
+C:\Users\Rodrigo\Estudos\Fbiz.PraticalTest\Fbiz.PraticalTest.Domain\obj\Debug\Fbiz.PraticalTest.Domain.pdb
